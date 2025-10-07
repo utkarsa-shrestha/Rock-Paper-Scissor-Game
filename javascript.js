@@ -10,7 +10,7 @@ const game = () =>{
     console.log(computer_generated)
 
     if((user_input == "Rock" && computer_generated == "Scissor") || (user_input == "Paper" && computer_generated =="Rock") || (user_input == "Scissor" && computer_generated == "Paper")){
-        alert("You win !!")
+        alert("You win!!")
     }
     else if(user_input == computer_generated){
         alert("Its a Draw")
