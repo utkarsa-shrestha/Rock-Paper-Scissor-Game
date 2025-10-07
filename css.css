@@ -1,0 +1,99 @@
+body, html{
+    display: flex;
+
+    justify-content: center;   
+    align-items: center;
+}
+.gamebackground{
+    width: 700px;
+    height: 500px;
+
+    margin-top: 50px;
+
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    padding: 10px;
+}
+h1{
+    text-align: center;
+    text-decoration: wavy;
+    color: rgb(0, 75, 136);
+
+
+}
+.actualgame{
+    padding-left: 20px;
+    display: block;
+}
+
+#rockimg, #paperimg, #scissorimg{
+    width: 150px;
+    height: 150px;
+    aspect-ratio: 1;
+    object-fit: contain;
+
+    border: 2px solid rgb(0, 75, 136);
+
+    border-radius: 5px;
+    transition: 0.2s ease;
+}
+#rock, #paper, #scissor{
+    position: absolute;
+    opacity: 0px;
+    width: 0;
+    height: 0;
+}
+#rockimg:hover, #paperimg:hover, #scissorimg:hover{
+    transform: scale(1.05);
+}
+#rockimg:active, #paperimg:active, #scissorimg:active{
+    transform: scale(1);
+}
+#rock + #rockimg, #paper + #paperimg, #scissor + #scissorimg{
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+#rock:checked + #rockimg, #paper:checked + #paperimg, #scissor:checked + #scissorimg{
+    transform: scale(1.05);
+    border: 2px solid black;
+}
+.choose{
+    margin-left: 50px;
+    display: flex;
+    gap: 30px;
+}
+.choose h3{
+    font-style: italic;
+}
+#submit{
+    width: 100px;
+    height: 30px;
+
+    border: 2px solid rgb(0, 75, 136);
+
+
+    border-radius: 49px;
+
+    background-color: white ;
+
+    color: rgb(0, 75, 136);
+
+    font: 40px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 40px;
+    margin-left: 38%;
+
+    transition: 0.5s ease;
+}
+#submit:hover{
+    transform: scale(1.05);
+}
+#submit:active{
+    transform: scale(1);
+    opacity: 0.4;
+}

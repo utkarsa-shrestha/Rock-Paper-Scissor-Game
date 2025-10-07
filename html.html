@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body,html{
+            background-color: rgb(48, 162, 255);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <main>
+        <div class="gamebackground">
+            <h1>Welcome to the Game!</h1>
+            <hr>
+            <div class="actualgame">
+                <h2>Choose:</h2>
+                <form action="" class="choose">
+                    <label for="rock">
+                        <input type="radio" name="game" id="rock" class="input" value="Rock">
+                        <img src="Images/rock.jpg" alt="" id="rockimg">
+                        <h3>Rock</h3>
+                    </label>
+                    <label for="paper">
+                        <input type="radio" name="game" id="paper" class="input" value="Paper">
+                        <img src="Images/paper.jpg" alt=""  id="paperimg">
+                        <h3>Paper</h3>
+                    </label>
+                    <label for="scissor">
+                        <input type="radio" name="game" id="scissor" class="input" value="Scissor">
+                        <img src="Images/scissors.jpg" alt="" id="scissorimg">
+                        <h3>Scissor</h3>
+                    </label>
+                </form>
+                <hr>
+                <button id="submit" onclick="game()">Submit</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
