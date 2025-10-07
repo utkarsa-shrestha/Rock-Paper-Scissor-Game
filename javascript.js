@@ -9,13 +9,7 @@ const game = () =>{
     let computer_generated = game_value[index]
     console.log(computer_generated)
 
-    if(user_input == "Rock" && computer_generated == "Scissors"){
-        alert("You win !!")
-    }
-    else if(user_input == "Paper" && computer_generated =="Rock"){
-        alert("You win !!")
-    }
-    else if(user_input == "Scissors" && computer_generated == "Paper"){
+    if((user_input == "Rock" && computer_generated == "Scissor") || (user_input == "Paper" && computer_generated =="Rock") || (user_input == "Scissor" && computer_generated == "Paper")){
         alert("You win !!")
     }
     else if(user_input == computer_generated){
