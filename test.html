@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Window with Dim Background</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f0f0f0;
+    }
+
+    /* Overlay (dimming effect) */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Mini window */
+    .mini-window {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.8);
+      background: white;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 10;
+    }
+
+    /* When active */
+    .show {
+      opacity: 1;
+      pointer-events: all;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .overlay.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    #openBtn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #007bff;
+      color: white;
+      font-size: 16px;
+    }
+
+    #openBtn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="openBtn">Open Mini Window</button>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="mini-window" id="miniWindow">
+    <h2>Hello!</h2>
+    <p>This is your mini window 😄</p>
+    <button id="closeBtn">Close</button>
+  </div>
+
+  <script>
+    const openBtn = document.getElementById('openBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const overlay = document.getElementById('overlay');
+    const miniWindow = document.getElementById('miniWindow');
+
+    openBtn.addEventListener('click', () => {
+      overlay.classList.add('show');
+      miniWindow.classList.add('show');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.remove('show');
+      miniWindow.classList.remove('show');
+    });
+
+    // Optional: close when clicking outside the mini window
+    overlay.addEventListener('click', () => {
+      overlay.classList.remove('show');
+      miniWindow.classList.remove('show');
+    });
+  </script>
+
+</body>
+</html>
