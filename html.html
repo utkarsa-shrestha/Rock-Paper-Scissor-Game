@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <style>
-        body,html{
-            background-color: rgb(48, 162, 255);
+        html{
+            background-color: rgb(0, 64, 96);
             font-family: Arial, Helvetica, sans-serif;
         }
 
@@ -13,12 +13,118 @@
     <title>Document</title>
     <link rel="stylesheet" href="css.css">
     <link rel="stylesheet" href="win.css">
+    <link rel="stylesheet" href="confetii.css">
+    <link rel="stylesheet" href="lose.css">
+    <link rel="stylesheet" href="cross.css">
+    <link rel="stylesheet" href="draw.css">
+    <link rel="stylesheet" href="drawanimation.css">
 </head>
 <body>
     <script src="javascript.js"></script>
     <main>
+        <div class="confetti-container">
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+    </div>
+    <div class="lose-container">
+        <div class="emoji">❌</div>
+        <div class="emoji">❌</div>
+        <div class="emoji">❌</div>
+        <div class="emoji">❌</div>
+        <div class="emoji">❌</div>
+        <div class="emoji">❌</div>
+        <div class="emoji">❌</div>
+        <div class="emoji">❌</div>
+        <div class="emoji">❌</div>
+        <div class="emoji">❌</div>
+        <div class="emoji">❌</div>
+        <div class="emoji">❌</div>
+        <div class="emoji">❌</div>
+        <div class="emoji">❌</div>
+        <div class="emoji">❌</div>
+    </div>
+    <div class="draw-container">
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+        <div class="emoji">👍</div>
+    </div>
         <div class="gamebackground">
-            <h1>Welcome to the Game!</h1>
+            <h1 class="welcome">Welcome to the Game!</h1>
             <hr>
             <div class="actualgame">
                 <h2>Choose:</h2>
@@ -44,9 +150,35 @@
             </div>
         </div>
         <div id="win">
-                <button class="close" onclick="closewindow()">
-                </button>
+                <div class="closediv">
+                    <button class="close" onclick="closewindow()">
+                    </button>
+                </div>
+                <div class="wintxt">
+                    <hr style="margin-top: 50px; margin-bottom: -50px;">
+                    <p class="actualtxt"><b> 🎉You Won!🎉</b></p>
+                    <p class="after">Congratulations!</p><hr>
+                </div>
         </div>
+        <div id="lose">
+            <div class="closediv">
+                <button class="close" onclick="closewindow()"></button>
+            </div>
+            <div class="losetxt">
+                <p class="actualtxt"> <b> 👎You lost!👎</b></p>
+            </div>
+        </div>
+        <div id="draw">
+            <div class="closediv">
+                <button class="close" onclick="closewindow()"></button>
+            </div>
+            <div class="drawtxt">
+                <p class="actualtxt"><b>👍Its a draw!👎</b></p>
+            </div>
+        </div>
+
+        <div class="overview"></div>
     </main>
+    
 </body>
 </html>

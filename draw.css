@@ -1,0 +1,54 @@
+#draw{
+    background-color: rgb(42, 134, 210);
+    width: 400px;
+    height: 300px;
+
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+    position: absolute;
+    top: 145px;
+    right: 490px ;
+   
+    transition: 0.5s ease;
+    display: none;
+
+    z-index: 100;
+
+    animation: view ease 0.5s;
+}
+@keyframes view{
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1.03);
+    }
+}
+.drawtxt{
+    width:  340px ;
+  height: 200px;
+
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+
+  display: flex;
+  align-items: center   ;
+  justify-content: center;
+  
+  background-color: white;
+   
+  border-radius: 10px;
+}
+.drawtxt .actualtxt{
+  font-size: 40px;
+  padding: 0px;
+
+  color: gold;
+  font-family: cursive;
+}
